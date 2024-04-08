@@ -16,7 +16,7 @@ const totalScoreOpponentInfo = document.getElementById('total_score_opponent');
 
 let rollCount = 0;
 
-//定义player class
+//deify player class
 class PlayerScore01 {
     constructor(roundScore, totalScore) {
         this.roundScore = roundScore;
@@ -128,7 +128,7 @@ const randomDice = () =>{
    
 }
 
-//初始化player的值
+//Rest New Game
 function resetGame() {
     rollCount = 0;
     playerScore01.roundScore = 0;
