@@ -460,9 +460,14 @@ nav {
      cursor: pointer;
  }
  .roll:hover,
- .roll:hover > h2 {
+ .roll:focus {
      color: #fff;
      background: $first_color;
+ }
+
+ .roll:active {
+  color: #fff;
+  background: $first_color;
  }
 /*===============RESULT POP_UP ===============*/
 .pop_up_box {
