@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghan Yang</title>
+      <!--CSS link-->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="icon" href="../images/icon.bmp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- ====== JS link ===== -->
+    <script src="../script/final_project.js" defer></script>
+
+</head>
+<body>
+    <div class="wallpaper">
+        <header class="header">
+            <div class="header-container container">
+                <h2 class="logo-title" id="javascript_message">Nora.Y Final Project_Dice game</h2>
+                    <nav>
+                        <div class="nav-container li_style_non" id="nav_present">
+                            <div>
+                                <span class="x_mark" id="x_mark_list">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </span>
+
+                                <div class="nav_info">
+                                    <h4>How to play</h4>
+                                    <p class="show_lis" id="show_list01">Hide</p>
+                                </div>
+                                <ul class="list_info" id="list_info01">
+                                    <li>To start, click the 'Roll Dice' button.</li>
+                                    <li>To advance to the next round, click the 'Roll Dice' button again.</li>
+                                    <li>After three round, the game is over and the final score is calculated.</li>
+                                    <li>If you want to play again, click the 'New Game' button or refresh the page.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="nav_info">
+                                    <h4>Rules</h4>
+                                    <p class="show_lis" id="show_list02">Hide</p>
+                                </div>
+                                <ul class="list_info" id="list_info02">
+                                    <li>Each round, you and the computer both roll a pair of dice.</li>
+                                    <li>Your score for round will be based on the sum of the dice.</li>
+                                    <li>If you roll doubles(e.g a 3 and a 3) then your score is multiplied by 2.</li>
+                                    <li>Rolling a 1 will give you a score of 0 for that round.</li>
+                                    <li>The player who has the most points at the end of three rounds is the winner.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div id="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                    </div>
+
+            </div>
+           
+        </header>
+    
+        <main class="main_box">
+            <section class="section container" id="code">
+                <div class="code-container grid">
+                    <div class="code-content">
+                        <div class="code_box">
+                            <div class="player_container">
+                                <div class="user_info">
+                                    <div class="info_row">
+                                        <h2>You</h2>
+                                    </div>
+                                    <div class="info_row">
+                                        <div class="img_container">
+                                            <img src="../images/you.jpg" alt="user">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dice_info">
+                                    <h2>Your Dice</h2>
+                                </div>
+                                <div class="dice-wrapper">
+                                    <div class="dice_container">
+                                        <h2>Dice 01</h2>
+                                        <div class="dice" id="dice_01">
+                                            <div class="face front"></div>
+                                            <div class="face back"></div>
+                                            <div class="face top"></div>
+                                            <div class="face bottom"></div>
+                                            <div class="face right"></div>
+                                            <div class="face left"></div>
+                                        </div> 
+                                    </div>
+                                   
+                                    <div class="dice_container">
+                                        <h2>Dice 02</h2>
+                                        <div class="dice" id="dice_02">
+                                            <div class="face front"></div>
+                                            <div class="face back"></div>
+                                            <div class="face top"></div>
+                                            <div class="face bottom"></div>
+                                            <div class="face right"></div>
+                                            <div class="face left"></div>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="score_wrapper">
+                                    <div class="dice_info">
+                                        <h2>Your Score</h2>
+                                    </div>
+                                    <div class="score_container">
+                                        <div class="score border_right">
+                                            <h3>Score this Round</h3>
+                                            <h3 id="round_score_you">0</h3>
+                                        </div>
+                                        <div class="score">
+                                            <h3>Total Score</h3>
+                                            <h3 id="total_score_you">0</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="player_container">
+                                <div class="user_info">
+                                    <div class="info_row">
+                                        <h2>Opponent</h2>
+                                    </div>
+                                    <div class="info_row">
+                                        <div class="img_container">
+                                            <img src="../images/opponent.png" alt="user">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dice_info">
+                                    <h2>Opponent's Dice</h2>
+                                </div>
+                                <div class="dice-wrapper">
+                                    <div class="dice_container">
+                                        <h2>Dice 01</h2>
+                                        <div class="dice" id="dice_03">
+                                            <div class="face front"></div>
+                                            <div class="face back"></div>
+                                            <div class="face top"></div>
+                                            <div class="face bottom"></div>
+                                            <div class="face right"></div>
+                                            <div class="face left"></div>
+                                        </div> 
+                                    </div>
+                                   
+                                    <div class="dice_container">
+                                        <h2>Dice 02</h2>
+                                        <div class="dice" id="dice_04">
+                                            <div class="face front"></div>
+                                            <div class="face back"></div>
+                                            <div class="face top"></div>
+                                            <div class="face bottom"></div>
+                                            <div class="face right"></div>
+                                            <div class="face left"></div>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="score_wrapper">
+                                    <div class="dice_info">
+                                        <h2>Opponent's Score</h2>
+                                    </div>
+                                    <div class="score_container">
+                                        <div class="score border_right">
+                                            <h3>Score this Round</h3>
+                                            <h3 id="round_score_opponent">0</h3>
+                                        </div>
+                                        <div class="score">
+                                            <h3>Total Score</h3>
+                                            <h3 id="total_score_opponent">0</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button_container">
+                            <button class="roll" id="new_game">
+                                <h2>New game</h2>
+                            </button>
+                            <button class="roll" id="roll_dice">
+                                <h2>Roll Dice</h2>
+                            </button>
+                        </div>       
+                       
+                    </div>
+                </div>
+            </section>
+
+            <div class="pop_up_box opacity" id="pop_up">
+                <div class="pop_up_heading">
+                    <h2 id="results_info">Hello, User</h2>
+                    <span class="x_mark" id="x_mark"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+
+                <div class="pop_up_content">
+                    <img src="../images/win.gif" alt="results" id="results_img">
+                    <p>let's play again.</p>
+                </div>
+            </div>
+            
+        </main>
+
+
+    
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="footer-container container">
+                <p class="footer-copyright">
+                    &copy; 2024 Nora Yang. All Rights Reserved
+                </p>
+    
+                <div class="footer-social-links">
+                    <a href="" class="footer-social-link">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>    
+    
+</body>
+</html>
